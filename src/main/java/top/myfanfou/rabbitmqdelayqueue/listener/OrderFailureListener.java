@@ -44,6 +44,7 @@ public class OrderFailureListener {
         log.info("延时订单消费成功");
       }else {
         // 重新投递
+        
         channel.basicReject(msgTag, true);
       }
 
